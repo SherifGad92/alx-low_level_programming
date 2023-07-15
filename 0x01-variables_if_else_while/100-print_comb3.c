@@ -10,9 +10,12 @@
 
 int main(void)
 {
-	for (int x = 0; x <= 9; x++)
+	int x = 0;
+	int y = 0;
+
+	while (x <= 9)
 	{
-		for (int y = 0; y <= 9; y++)
+		while (y <= 9)
 		{
 			if (x < y)
 			{
@@ -24,7 +27,9 @@ int main(void)
 					putchar(' ');
 				}
 			}
+			y++;
 		}
+		x++
 	}
 	putchar('\n');
 	return (0);
