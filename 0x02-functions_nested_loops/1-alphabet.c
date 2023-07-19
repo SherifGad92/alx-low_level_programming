@@ -3,18 +3,16 @@
 /**
  * main - Entry point
  *
- * Discription: prints _putchar using putchar prototype.
+ * Discription: prints alphabet in lower case.
  *
- * Return: Always 0 (sucess)
  */
 
-int main(void)
+void print_alphabet(void)
 {
-	char str[] = "_putchar";
 	int x;
 
-	for (x = 0; x < 8; x++)
-		_putchar(str[x];
+	for (x = 'a'; x <= 'z'; x++)
+		_putchar(str[x]);
 	_putchar('\n');
 
 	return (0);
