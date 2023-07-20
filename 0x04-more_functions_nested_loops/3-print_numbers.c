@@ -2,11 +2,13 @@
 
 /**
  * print_numbers - function that prints numbers from 0 to 9
+ *
+ * Return: Always 0 (sucess)
  */
 
 void print_numbers(void)
 {
-	int x + 0;
+	int x = 0;
 
 	do {
 		_putchar(x + 48);
