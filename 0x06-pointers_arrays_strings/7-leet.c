@@ -10,20 +10,21 @@
 
 char *leet(char *s)
 {
-	int x;
+	char *ps = s;
+	char letter[] = { 'A', 'E', 'O', 'T', 'L'};
+	int key[] = { 4, 3, 0, 7, 1};
+	unsigned int i;
 
-	for (x = 0; s[x] != '\0'; x++)
+	while (*s)
 	{
-		while (s[x] == 'a' || s[x] == 'A')
-			s[x] = '4';
-		while (s[x] == 'e' || s[x] == 'E')
-			s[x] = '3';
-		while (s[x] == 'o' || s[x] == 'O')
-			s[x] = '0';
-		while (s[x] == 't' || s[x] == 'T')
-			s[x] = '7';
-		while (s[x] == 'l' || s[x] == 'L')
-			s[x] = '1';
+		for (i = 0; i < sizeof(letter) / sizeof(char); i++)
+		{
+			if (*s == letter[i] || *s == letter[i] + 32)
+			{
+				*s = *key[i];
+			}
+		}
+		s++;
 	}
-	return (s);
+	return (ps);
 }
