@@ -7,18 +7,18 @@
  * @b: constant
  * @n: byte size
  *
- * Return: s
+ * Return: xl
  */
 
 char *_memset(char *s, char b, unsigned int n);
 {
-		unsigned int i = 0;
-	char *x = s;
+	unsigned int i = 0;
+	char *xl = s;
 
 	while (i < n)
 	{
 		*s++ = b;
 		i++;
 	}
-	return (x);
+	return (xl);
 }
