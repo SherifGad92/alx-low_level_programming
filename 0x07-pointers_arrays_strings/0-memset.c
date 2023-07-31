@@ -1,22 +1,21 @@
 #include "main.h"
 
 /**
- * _memset - fills memory with constant byte
+ * *_memset - fills memory with contact byte
+ * @s: pointer of memoty area
+ * @b: constant
+ * @n: number of bytes filled
  *
- * @s: a pointer
- * @b: constant to be added
- * @n: number of bytes to be filled
- *
- * Return: X a pointer to the memory area s
+ * Return: a pointer the memeory area s
  */
 
-char *_memset(char *s, char b, unsigned int n);
+char *_memset(char *s, char b, unsigned int n)
 {
-	unsigned int i;
-	unsigned char *x = s, value = b;
+	unsigned int len;
 
-	for (i = 0; i < n; i++)
-		x[i] = value;
-
-	return (x);
+	for (len = 0; len < n; len++)
+	{
+		s[len] = b;
+	}
+	return (s);
 }
