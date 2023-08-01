@@ -11,14 +11,15 @@
 void print_diagsums(int *a, int size)
 {
 	int i;
-	int sd1, sd2;
+	int sd1;
+	int sd2;
 
 	for (i = 0; i < size; i++)
 	{
-		sd1 = sd1 + a[i];
-		sd2 = sd2 + a[size - i - 1];
-		a = a + size;
+		sd1 += a[i];
+		sd2 += a[size - i - 1];
+		a += size;
 	}
 	printf("%d, ", sd1);
-	printf("%d\n", ds2);
+	printf("%d\n", sd2);
 }
