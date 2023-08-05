@@ -24,7 +24,9 @@ int main(int argc, char *argv[])
 				units += mon / ch[x];
 				mon = mon % ch[x];
 				if (mon % ch[x] == 0)
+				{
 					break;
+				}
 			}
 		}
 		printf("%d\n", units);
