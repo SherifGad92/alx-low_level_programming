@@ -13,7 +13,7 @@ int main(int argc, char const *argv[])
 {
 	int x;
 
-	for (x = 0, argc >= 0, x++)
+	for (x = 0, argc--, x++)
 	{
 		printf("%s\n", argv[x]);
 	}
