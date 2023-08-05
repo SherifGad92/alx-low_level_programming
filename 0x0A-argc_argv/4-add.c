@@ -10,9 +10,9 @@
  * Return: 0 (success), 1 (Error)
  */
 
-int main(int argc, char const *argv[])
+int main(int argc, char *argv[])
 {
-	int sum;
+	int sum = 0;
 	char *x;
 
 	while (--argc)
