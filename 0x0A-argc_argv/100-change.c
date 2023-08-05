@@ -17,19 +17,19 @@ int main(int argc, char *argv[])
 		int x, units = 0, mon = atoi(argv[1]);
 		int ch[] = {25, 10, 5, 2, 1};
 
-		for (x = 0, x < 5; x++)
+	for (x = 0, x < 5; x++)
+	{
+		if (mon >= ch[x])
 		{
-			if (mon >= ch[x])
+			units += mon / ch[x];
+			mon = mon % ch[x];
+			if (mon % ch[x] == 0)
 			{
-				units += mon / ch[x];
-				mon = mon % ch[x];
-				if (mon % ch[x] == 0)
-				{
-					break;
-				}
+				break;
 			}
 		}
-		printf("%d\n", units);
+	}
+	printf("%d\n", units);
 	}
 	else
 	{
