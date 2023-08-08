@@ -10,8 +10,8 @@
 
 char *argstostr(int ac, char **av)
 {
-	int size, count, ct1, ct2 = 0;
-	char *ary;
+	int size, count, count1, count2 = 0;
+	char *ptr;
 
 	if (ac == 0 || av == NULL)
 	{
@@ -20,7 +20,7 @@ char *argstostr(int ac, char **av)
 
 	for (count = 0; count < ac; count++)
 	{
-		for (ct1 = 0; av[count][ct1] != '\0'; ct1++)
+		for (count1 = 0; av[count][count1] != '\0'; count1++)
 		{
 			size += 1;
 		}
@@ -28,22 +28,22 @@ char *argstostr(int ac, char **av)
 	}
 	size += 1;
 
-	ary = malloc(sizeof(char) * size);
-	if (ary == NULL)
+	ptr = malloc(sizeof(char) * size);
+	if (ptr == NULL)
 	{
-		free(ary);
+		free(ptr);
 		return (NULL);
 	}
 	for (count = 0; count < ac; count++)
 	{
-		for (ct1 = 0; av[count][ct1] != '\0'; ct1++)
+		for (count1 = 0; av[count][count1] != '\0'; count1++)
 		{
-			ary[ct2] = av[count][ct1];
-			ct2++;
+			ptr[count2] = av[count][count1];
+			count2++;
 		}
-		ary[ct2] = '\n';
-		ct2++;
+		ptr[count2] = '\n';
+		count2++;
 	}
-	ary[ct2] = '\0';
-	return (ary);
+	ptr[count2] = '\0';
+	return (ptr);
 }
