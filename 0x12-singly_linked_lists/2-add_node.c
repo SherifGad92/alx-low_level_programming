@@ -3,7 +3,7 @@
 #include "lists.h"
 
 /**
- * add_node_end - adds a new node at the end of a list_t list.
+ * add_node - adds a new node at the begining of a list_t list.
  *
  * @head: double pointer
  * @str: needs to be duplicated
@@ -13,20 +13,20 @@
 
 list_t *add_node(list_t **head, const char *str)
 {
-	list_t *x;
+	list_t *s;
 	unsigned int l = 0;
 
 	while (str[l])
 		l++;
 
-	x = malloc(sizeof(list_t));
-	if (!x)
+	s = malloc(sizeof(list_t));
+	if (!s)
 		return (NULL);
 
-	x->str = strdup(str);
-	x->len = l;
-	x->next = (*head);
-	(*head) = x;
+	s->str = strdup(str);
+	s->len = l;
+	s->next = (*head);
+	(*head) = s;
 
 	return (*head);
 }
