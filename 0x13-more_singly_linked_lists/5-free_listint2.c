@@ -6,15 +6,15 @@
  */
 void free_listint2(listint_t **head)
 {
-	listint_t x;
+	listint_t *temp;
 
 	if (!head)
 		return;
 	if (*head)
 	{
-		x = *head;
+		temp = *head;
 		*head = NULL;
-		free_listint(x);
+		free_listint(temp);
 		return;
 	}
 }
