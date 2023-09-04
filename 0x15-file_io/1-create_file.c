@@ -2,17 +2,15 @@
 
 /**
  * create_file - creates a file
- *
  * @filename: filename.
  * @text_content: content writed in the file.
  *
- * Return: 1 (success). -1 (fails).
+ * Return: 1 if it success. -1 if it fails.
  */
-
 int create_file(const char *filename, char *text_content)
 {
 	int fd;
-	int nlet;
+	int nletters;
 	int rwr;
 
 	if (!filename)
@@ -26,10 +24,10 @@ int create_file(const char *filename, char *text_content)
 	if (!text_content)
 		text_content = "";
 
-	for (let = 0; text_content[let]; let++)
+	for (nletters = 0; text_content[nletters]; nletters++)
 		;
 
-	rwr = write(fd, text_content, let);
+	rwr = write(fd, text_content, nletters);
 
 	if (rwr == -1)
 		return (-1);
@@ -38,3 +36,4 @@ int create_file(const char *filename, char *text_content)
 
 	return (1);
 }
+
